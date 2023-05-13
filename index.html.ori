@@ -5,14 +5,13 @@
     <title></title>
     <style>
         .font-text {
-            font-family: Arial;
             font-size: 22px;
         }
     </style>
 </head>
 
 <body>
-    <div style="padding:4% 8%">
+    <div style="padding:6%">
         <center>
             <div>
                 <table>
@@ -45,9 +44,10 @@
                         style="font-family:Arial;">&nbsp;&nbsp;</span></u></strong><strong><u><span
                         style="font-family:Arial;">TUGAS</span></u></strong>
         </p>
-        {{#each data}}
         <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:normal;" class="font-text"><span
-                style="font-family:Arial;">094/{{this.nomor_sppd}}/412.033/{{this.tahun}}</p>
+                style="font-family:Arial;">Nomor : 090 /</span><span
+                style="font-family:Arial;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                style="font-family:Arial;">/ 412.033/ 2022</span></p>
         <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:normal;" class="font-text"><span
                 style="font-family:Arial;">&nbsp;</span></p>
         <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:normal;" class="font-text"><span
@@ -55,17 +55,27 @@
         <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
             <tbody>
                 <tr>
-                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">Dasar</span></p>
                     </td>
-                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:center;" class="font-text"><span
                                 style="font-family:Arial;">:</span></p>
                     </td>
-                    <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
-                        <ol type="1" style="margin:0pt; padding-left:0pt;" class="font-text">{{{
-                            this.dasar_spt }}}</ol>
+                    <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <ol type="1" style="margin:0pt; padding-left:0pt;">
+                            <li style="margin-left:15.01pt; text-align:justify; padding-left:2.99pt; font-family:Arial;"
+                                class="font-text">
+                                Peraturan Daerah ***** ** Tahun 2021 tentang Anggaran Pendapatan dan Belanja ******
+                                Tahun Anggaran 2022</li>
+                            <li style="margin-left:15.01pt; text-align:justify; padding-left:2.99pt; font-family:Arial;"
+                                class="font-text">
+                                Peraturan Bupati Nomor 65 ***** 2021 tentang Penjabaran Anggaran&nbsp;&nbsp;</li>
+                            <li style="margin-left:15.01pt; text-align:justify; padding-left:2.99pt; font-family:Arial;"
+                                class="font-text">
+                                Pendapatan dan Belanja Daerah ***** Anggaran 2022 Perintah ****** Bojonegoro</li>
+                        </ol>
                     </td>
                 </tr>
             </tbody>
@@ -90,8 +100,6 @@
                                 style="font-family:Arial;">:</span></p>
                     </td>
                     <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-
-                        {{#each this.pegawai_yang_diperintahkan}}
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">Nama</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
@@ -102,12 +110,8 @@
                                 style="font-family:Arial;">Jabatan&nbsp;</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">&nbsp;</span></p>
-
-                        {{/each}}
                     </td>
                     <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-
-                        {{#each this.pegawai_yang_diperintahkan}}
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">:</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
@@ -116,27 +120,67 @@
                                 style="font-family:Arial;">:</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">:</span></p>
-                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
-                                style="font-family:Arial;">&nbsp;</span></p>
-                        {{/each}}
+                                
                     </td>
                     <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
-
-                        {{#each this.pegawai_yang_diperintahkan}}
                         <p style="margin-top:0pt; margin-left:1.05pt; margin-bottom:0pt; text-align:justify;"
                             class="font-text">
-                            <span style="font-family:Arial;">{{ this.name }}</span>
+                            <span style="font-family:Arial;">Triguno S. Prio, S.STP, MM</span>
                         </p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
-                                style="font-family:Arial;">{{ this.nip }}</span></p>
+                                style="font-family:Arial;">19810815 199912 1 002</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt;" class="font-text"><span
-                                style="font-family:Arial;"> {{ this.pangkat }} {{ this.golongan }}</span></p>
+                                style="font-family:Arial;">Pembina (IV/a)</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
-                                style="font-family:Arial;">{{ this.jabatan }}</span></p>
+                                style="font-family:Arial;">****** Bagian Protokol dan Komunikasi Pimpinan</span></p>
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
                                 style="font-family:Arial;">&nbsp;</span></p>
-
-                        {{/each}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <!-- <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">Kepada</span></p> -->
+                    </td>
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;"></span></p>
+                    </td>
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">Nama</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">NIP</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">Pangkat</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">Jabatan&nbsp;</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">&nbsp;</span></p>
+                    </td>
+                    <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">:</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">:</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">:</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">:</span></p>
+                    </td>
+                    <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
+                        <p style="margin-top:0pt; margin-left:1.05pt; margin-bottom:0pt; text-align:justify;"
+                            class="font-text">
+                            <span style="font-family:Arial;">Triguno S. Prio, S.STP, MM</span>
+                        </p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">19810815 199912 1 002</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt;" class="font-text"><span
+                                style="font-family:Arial;">Pembina (IV/a)</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">****** Bagian Protokol dan Komunikasi Pimpinan</span></p>
+                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
+                                style="font-family:Arial;">&nbsp;</span></p>
                     </td>
                 </tr>
                 <tr style="height:48pt;">
@@ -150,8 +194,10 @@
                     </td>
                     <td colspan="4" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top;">
                         <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;" class="font-text"><span
-                                style="font-family:Arial;">Menghadiri {{ this.perihal }}, pada tanggal {{
-                                this.tanggalKegiatan }} {{ this.tahun }}&nbsp;</span></p>
+                                style="font-family:Arial;">Menghadiri ******** Pagelaran Tari Pembuka &quot;Bedhoyo
+                                Plesiran&quot; dan Seni Pertunjukan &quot;Kidung Plesiran Bojonegoro&quot; Duta Seni
+                                Kabupaten Bojonegoro di ******** Jawa Timur TMII Jakarta, pada tanggal 17 s/d 18
+                                ******** 2022&nbsp;</span></p>
                     </td>
                     <td style="vertical-align:top;"><br></td>
                 </tr>
@@ -196,20 +242,17 @@
                 style="font-family:Arial; color:#262626;">:</span><span
                 style="font-family:Arial; color:#262626;">&nbsp;&nbsp;&nbsp;</span><span
                 style="font-family:Arial; color:#262626;">&nbsp;</span><span
-                style="font-family:Arial; color:#262626;">{{ this.tanggal_spt }}</span>
+                style="font-family:Arial; color:#262626;">16 Desember 2022</span>
         </p>
         <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; line-height:normal;" class="font-text"><span
                 style="font-family:Arial; color:#262626;">&nbsp;</span></p>
-        {{#each this.pejabat_yang_memerintahkan.an}}
         <p style="margin-top:0pt; margin-left:436pt; margin-bottom:0pt; text-align:center; line-height:normal;"
             class="font-text">
-            <span style="font-family:Arial; color:#262626;">{{ this.name }}&nbsp;</span>
+            <span style="font-family:Arial; color:#262626;">a.n. SEKRETARIS DAERAH&nbsp;</span>
         </p>
-
-        {{/each}}
         <p style="margin-top:0pt; margin-left:436pt; margin-bottom:0pt; text-align:center; line-height:normal;"
             class="font-text">
-            <span style="font-family:Arial;">{{ this.pejabat_yang_memerintahkan.jabatan }}</span>
+            <span style="font-family:Arial;">******* Administrasi Umum</span>
         </p>
 
         <p style="margin-top:0pt; margin-left:216pt; margin-bottom:0pt; text-align:center; line-height:normal;"
@@ -231,19 +274,17 @@
 
         <p style="margin-top:0pt; margin-left:436pt; margin-bottom:0pt; text-align:center; line-height:normal;"
             class="font-text">
-            <strong><u><span style="font-family:Arial;">{{ this.pejabat_yang_memerintahkan.name }}</span></u></strong>
+            <strong><u><span style="font-family:Arial;">NINIK SUSMIATI, SKM, MKes</span></u></strong>
         </p>
         <p style="margin-top:0pt; margin-left:436pt; margin-bottom:0pt; text-align:center; line-height:normal;"
             class="font-text">
-            <span style="font-family:Arial;">{{ this.pejabat_yang_memerintahkan.pangkat }}</span>
+            <span style="font-family:Arial;">Pembina ***** Muda</span>
         </p>
         <p style="margin-top:0pt; margin-left:436pt; margin-bottom:0pt; text-align:center; line-height:normal;"
             class="font-text">
-            <span style="font-family:Arial;">NIP. {{ this.pejabat_yang_memerintahkan.nip }}</span>
+            <span style="font-family:Arial;">NIP. 19680325 199302 2 001</span>
         </p>
         <p style="margin-top:0pt; margin-bottom:10pt;">&nbsp;</p>
-
-        {{/each}}
     </div>
 </body>
 

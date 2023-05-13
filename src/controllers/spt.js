@@ -24,8 +24,8 @@ exports.delete = async (req, res, next) => {
     }
 
     try {
-        const spt = await spt.findOne(data);
-        await spt.remove();
+        const spt = await Spt.findOne(data);
+        await Spt.remove();
         return res.status(200).json({
             message: "Data dengan id= " + id + " berhasil di hapus",
             data: true
@@ -321,30 +321,36 @@ exports.createPDF = async (req, res, next) => {
             datapegawai = v
         }
     })
+    let tanggalKegiatan = "";
+    const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+    if (req.body.tanggal_mulai == req.body.tanggal_selesai) {
+        const d = new Date(req.body.tanggal_mulai);
+        let tgl = d.getDate();
+        let month = months[d.getMonth()];
+        tanggalKegiatan = tgl + " " + month
+    } else {
+        const dMulai = new Date(req.body.tanggal_mulai);
+        let tglMulai = d.getDate();
+        let monthMulai = months[d.getMonth()];
+        const dSelesai = new Date(req.body.tanggal_selesai);
+        let tglSelesai = d.getDate();
+        let monthSelesai = months[d.getMonth()];
+        tanggalKegiatan = tglMuliai + " s/d " + tglSelesai + " " + month
+    }
+    const tanggalSPT = new Date(req.body.tanggal_spt);
+    const tanggalSPTIndo = tanggalSPT.getDate() + " " + months[tanggalSPT.getMonth()] + " " + tanggalSPT.getFullYear()
 
     const datainput = [
         {
             nomor_spt: req.body.nomor_spt,
-            pejabat_yang_memerintahkan: {
-                name: req.body.pejabat_yang_memerintahkan.name,
-                jabatan: req.body.pejabat_yang_memerintahkan.jabatan,
-                pangkat: req.body.pejabat_yang_memerintahkan.pangkat,
-                nip: req.body.pejabat_yang_memerintahkan.nip,
-                golongan: req.body.pejabat_yang_memerintahkan.golongan
-            },
-            pegawai_yang_diperintahkan: [
-                {
-                    name: datapegawai.name,
-                    jabatan: datapegawai.jabatan,
-                    pangkat: datapegawai.pangkat,
-                    nip: datapegawai.nip,
-                    golongan: datapegawai.golongan
-                }
-            ],
+            pejabat_yang_memerintahkan: req.body.pejabat_yang_memerintahkan,
+            pegawai_yang_diperintahkan: req.body.pegawai_yang_diperintahkan,
+            jmlPegawai: pegawai.length,
+            tanggalKegiatan: tanggalKegiatan,
             perihal: req.body.perihal,
             dasar_spt: req.body.dasar_spt,
             tanggal_mulai: req.body.tanggal_mulai,
-            tanggal_spt: req.body.tanggal_spt,
+            tanggal_spt: tanggalSPTIndo,
             lokasi_kegiatan: req.body.lokasi_kegiatan,
             tanggal_selesai: req.body.tanggal_selesai,
             tahun: req.body.tahun,
